@@ -1,0 +1,865 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.useso.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="hexo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/lingxing.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="目前使用NexT.Pisces主题，优化过程比较零碎，也比较多，在此整理一下。
+菜单设置NexT主题菜单设置，用于设置博客上方导航栏，在主题配置文件中修改。
+1234567menu:    home: /                       #主页    categories: /categories		#分类页（需手动创建）    #about: /about				#关于页面（需手动">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客Next主题优化">
+<meta property="og:url" content="http://gondole.github.io/2016/01/22/Hexo博客Next主题优化/index.html">
+<meta property="og:site_name" content="Gondole's Blog">
+<meta property="og:description" content="目前使用NexT.Pisces主题，优化过程比较零碎，也比较多，在此整理一下。
+菜单设置NexT主题菜单设置，用于设置博客上方导航栏，在主题配置文件中修改。
+1234567menu:    home: /                       #主页    categories: /categories		#分类页（需手动创建）    #about: /about				#关于页面（需手动">
+<meta property="og:image" content="http://7xqdqt.com1.z0.glb.clouddn.com/2016%2F03%2F24%2Fhexo.png">
+<meta property="og:updated_time" content="2016-04-07T06:03:59.817Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo博客Next主题优化">
+<meta name="twitter:description" content="目前使用NexT.Pisces主题，优化过程比较零碎，也比较多，在此整理一下。
+菜单设置NexT主题菜单设置，用于设置博客上方导航栏，在主题配置文件中修改。
+1234567menu:    home: /                       #主页    categories: /categories		#分类页（需手动创建）    #about: /about				#关于页面（需手动">
+<meta name="twitter:image" content="http://7xqdqt.com1.z0.glb.clouddn.com/2016%2F03%2F24%2Fhexo.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 1424008,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Hexo博客Next主题优化 | Gondole's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-74108099-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Gondole's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">镜花水月</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 's75Vw1pe-chmfjvr6svM','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hexo博客Next主题优化
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-22T17:16:30+08:00" content="2016-01-22">
+              2016-01-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/22/Hexo博客Next主题优化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/22/Hexo博客Next主题优化/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/01/22/Hexo博客Next主题优化/" class="leancloud_visitors" data-flag-title="Hexo博客Next主题优化">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://7xqdqt.com1.z0.glb.clouddn.com/2016%2F03%2F24%2Fhexo.png" alt=""></p>
+<p>目前使用NexT.Pisces主题，优化过程比较零碎，也比较多，在此整理一下。</p>
+<h1 id="菜单设置"><a href="#菜单设置" class="headerlink" title="菜单设置"></a>菜单设置</h1><p>NexT主题菜单设置，用于设置博客上方导航栏，在主题配置文件中修改。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">menu:  </span><br><span class="line">  home: /                       #主页  </span><br><span class="line">  categories: /categories		#分类页（需手动创建）  </span><br><span class="line">  #about: /about				#关于页面（需手动创建）  </span><br><span class="line">  archives: /archives			#归档页  </span><br><span class="line">  tags: /tags					#标签页（需手动创建）  </span><br><span class="line">  #commonweal: /404.html        #公益 404 （需手动创建）</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="标签页面"><a href="#标签页面" class="headerlink" title="标签页面"></a>标签页面</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
+<h2 id="分类页面"><a href="#分类页面" class="headerlink" title="分类页面"></a>分类页面</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"categories"</span></span><br></pre></td></tr></table></figure>
+<h1 id="分页插件"><a href="#分页插件" class="headerlink" title="分页插件"></a>分页插件</h1><p>在blog目录下的_config.yml站点配置文件末尾添加以下内容以设置分页参数</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># Plugins</span><br><span class="line">index_generator:</span><br><span class="line">  per_page: 10 ##首页默认10篇文章标题，如果值为0不分页</span><br><span class="line"></span><br><span class="line">archive_generator:</span><br><span class="line">  per_page: 10 ##归档页面默认10篇文章标题，如果值为0不分页</span><br><span class="line">  yearly: true ##生成年视图</span><br><span class="line">  monthly: true ##生成月视图</span><br><span class="line"></span><br><span class="line">tag_generator:</span><br><span class="line">  per_page: 10 ##标签页面默认10篇文章，如果值为0不分页</span><br><span class="line"></span><br><span class="line">category_generator: </span><br><span class="line">  per_page: 10 ##分类页面默认10篇文章，如果值为0不分页</span><br></pre></td></tr></table></figure>
+<h1 id="添加博客访问量统计"><a href="#添加博客访问量统计" class="headerlink" title="添加博客访问量统计"></a>添加博客访问量统计</h1><p>站点访问计数我使用的是不蒜子<br>使用非常方便，只需一行脚本+一行标签</p>
+<h2 id="显示站点总访问量"><a href="#显示站点总访问量" class="headerlink" title="显示站点总访问量"></a>显示站点总访问量</h2><p>我们使用的是hexo，所以要找到网站的布局文件，不同的主题的布局文件可能不一样，下面教程是针对NexT主题做出的修改。</p>
+<p>找到站点的themes/next/layout/_partials目录下的footer.swig文件<br>将以下脚本和标签插入到文件中</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">本站总访问量 &lt;span id="busuanzi_value_site_pv"&gt;&lt;/span&gt; &amp;nbsp&amp;nbsp&amp;nbsp</span><br><span class="line">您是第&lt;span id="busuanzi_value_site_uv"&gt;&lt;/span&gt;个来到的小伙伴</span><br></pre></td></tr></table></figure>
+<p>插入到这里</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="powered-by"&gt;</span><br><span class="line">	...</span><br><span class="line">  &lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"># 插入到这里</span><br><span class="line"></span><br><span class="line">&#123;% block footer %&#125;&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="显示文章阅读次数"><a href="#显示文章阅读次数" class="headerlink" title="显示文章阅读次数"></a>显示文章阅读次数</h2><p>因为不蒜子只能统计文章详情页面的阅读次数，在主页面是没法显示的，所以后来换成了leanCloud来进行阅读次数的显示。</p>
+<ol>
+<li>注册leanCloud，获取到appId和appKey 写入到主题配置文件里。  </li>
+<li>因为Next主题已经集成了相关代码，所以直接部署就生效了。</li>
+</ol>
+<h1 id="多说评论"><a href="#多说评论" class="headerlink" title="多说评论"></a>多说评论</h1><h2 id="多说创建个人站点"><a href="#多说创建个人站点" class="headerlink" title="多说创建个人站点"></a>多说创建个人站点</h2><p>在多说注册并且创建站点并且可以进行相关设置比如默认头像以及自定义CSS评论框样式</p>
+<h2 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改站点配置文件</h2><p>在站点配置文件中增加duoshuo_shortname字段，duoshuo_shortname就是上一步中你填写的值。</p>
+<pre><code>duoshuo_shortname: your_duoshuo_name
+</code></pre><h2 id="去除标签页评论"><a href="#去除标签页评论" class="headerlink" title="去除标签页评论"></a>去除标签页评论</h2><pre><code>title: categories
+date: 2015-09-18 21:46:42
+type: &quot;categories&quot;
+comments: false   #去除多说评论框
+</code></pre><h2 id="把多说评论依赖的embed-js放置底部"><a href="#把多说评论依赖的embed-js放置底部" class="headerlink" title="把多说评论依赖的embed.js放置底部"></a>把多说评论依赖的embed.js放置底部</h2><p>Yahoo性能中心总结的高性能网站设计的规则提及，把Javascript脚本尽量放到页面底部加载，这里不多说。<br>wordpress多说插件提供了在网页底部插入多说核心脚本embed.js这选项供用户选择，比较人性化。其他博客程序的话可以把embed.js放置到主题的footer底部加载。这里以hexo静态博客程序，NexT.Mist主题举个栗子，这里需要修改的文件是duoshuo.swig，路径是your-hexo-site\themes\next\layout_scripts目录下，将下面一段代码</p>
+<pre><code>(document.getElementsByTagName(&apos;head&apos;)[0]
+</code></pre><p>修改成下面的代码</p>
+<pre><code>(document.getElementById(&apos;footer&apos;)
+</code></pre><h1 id="添加RSS"><a href="#添加RSS" class="headerlink" title="添加RSS"></a>添加RSS</h1><p>添加feed插件，一定记得加–save</p>
+<pre><code>npm install hexo-generator-feed --save
+</code></pre><p>插件安装完成后 在站点配置文件_config.yml 里添加  </p>
+<pre><code>plugins:  
+- hexo-generator-feed
+</code></pre><p>在主题配置文件里添加  </p>
+<pre><code>rss: /atom.xml
+</code></pre><p>然后在执行 hexo g时就可以自动生成atom.xml文件了。</p>
+<h1 id="添加-Swiftype-搜索"><a href="#添加-Swiftype-搜索" class="headerlink" title="添加 Swiftype 搜索"></a>添加 Swiftype 搜索</h1><p>按照next的github上的教程配置了半天没生效…， 后来网上搜索到了新版本Swiftype Search的配置方法，注册 Swiftype 后 在安装配置时，复制你的code  </p>
+<pre><code>_st(&apos;install&apos;,&apos;xxxxxxxxxxxxx&apos;,&apos;2.0.0&apos;);
+</code></pre><p>其中 <strong>xxxxxxxxxxxxx</strong> 为你的swiftypeKey，然后在站点配置文件_config.yml中添加：</p>
+<pre><code>swiftype_key: xxxxxxxxxxxxx
+</code></pre><p>另外需要注意的是，在进入搜索框 <strong>(search field)</strong> 一项时，主意将搜索框的ID改成NexT主题搜索框的ID <strong>#st-search-input</strong>，TYPE修改为 <strong>elementID</strong>，最后进入(<strong>activate</strong>)这一项，点击右下角的<strong>ACTIVATE SWIFTYPE</strong>按钮即可完成swiftype的所有配置了。</p>
+<h1 id="Google字体库优化"><a href="#Google字体库优化" class="headerlink" title="Google字体库优化"></a>Google字体库优化</h1><p>由于国内偶尔访问谷歌字体库非常慢，故使用360CDN替换, themes\next\layout_partials\head.swig</p>
+<p>将：</p>
+<pre><code>&lt;link href=&quot;//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&amp;subset=latin,latin-ext&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+</code></pre><p>替换为：</p>
+<pre><code>&lt;link href=&quot;//fonts.useso.com/css?family=Lato:300,400,700,400italic&amp;subset=latin,latin-ext&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+</code></pre><h1 id="gulp插件压缩"><a href="#gulp插件压缩" class="headerlink" title="gulp插件压缩"></a>gulp插件压缩</h1><h3 id="安装gulp相关插件"><a href="#安装gulp相关插件" class="headerlink" title="安装gulp相关插件"></a>安装gulp相关插件</h3><pre><code>npm install gulp -g  
+npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp-htmlclean --save
+</code></pre><h3 id="执行-gulp-任务"><a href="#执行-gulp-任务" class="headerlink" title="执行 gulp 任务"></a>执行 gulp 任务</h3><p>安装完 gulp 插件后，需要在 package.json 同级目录下，新建 gulpfile.js。  </p>
+<p>文件保存后，当我们执行 hexo g &amp;&amp; gulp 时，gulp 会根据 gulpfile.js 中的配置，对 public 目录中的静态资源文件进行压缩。压缩完成后执行 hexo d 部署到 github / vps 中即可。</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/22/Hexo博客的多设备同步/" rel="next" title="Hexo博客的多设备同步">
+                <i class="fa fa-chevron-left"></i> Hexo博客的多设备同步
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/25/Android需要关注的一些技术/" rel="prev" title="Android需要关注的一些技术">
+                Android需要关注的一些技术 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/01/22/Hexo博客Next主题优化/"
+     data-title="Hexo博客Next主题优化"
+     data-content=""
+     data-url="http://gondole.github.io/2016/01/22/Hexo博客Next主题优化/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/01/22/Hexo博客Next主题优化/"
+           data-title="Hexo博客Next主题优化" data-url="http://gondole.github.io/2016/01/22/Hexo博客Next主题优化/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Gondole" />
+          <p class="site-author-name" itemprop="name">Gondole</p>
+          <p class="site-description motion-element" itemprop="description">简单记录生活</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/gondole" target="_blank">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/1914967801" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/gondole" target="_blank">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.douban.com/people/gondole/" target="_blank">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+            <div class="links-of-blogroll-title">Links</div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.android.com/" target="_blank">Android</a>
+                </li>
+              
+            </ul>
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#菜单设置"><span class="nav-number">1.</span> <span class="nav-text">菜单设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标签页面"><span class="nav-number">1.1.</span> <span class="nav-text">标签页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分类页面"><span class="nav-number">1.2.</span> <span class="nav-text">分类页面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分页插件"><span class="nav-number">2.</span> <span class="nav-text">分页插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加博客访问量统计"><span class="nav-number">3.</span> <span class="nav-text">添加博客访问量统计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#显示站点总访问量"><span class="nav-number">3.1.</span> <span class="nav-text">显示站点总访问量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示文章阅读次数"><span class="nav-number">3.2.</span> <span class="nav-text">显示文章阅读次数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多说评论"><span class="nav-number">4.</span> <span class="nav-text">多说评论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多说创建个人站点"><span class="nav-number">4.1.</span> <span class="nav-text">多说创建个人站点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改站点配置文件"><span class="nav-number">4.2.</span> <span class="nav-text">修改站点配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去除标签页评论"><span class="nav-number">4.3.</span> <span class="nav-text">去除标签页评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#把多说评论依赖的embed-js放置底部"><span class="nav-number">4.4.</span> <span class="nav-text">把多说评论依赖的embed.js放置底部</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加RSS"><span class="nav-number">5.</span> <span class="nav-text">添加RSS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加-Swiftype-搜索"><span class="nav-number">6.</span> <span class="nav-text">添加 Swiftype 搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Google字体库优化"><span class="nav-number">7.</span> <span class="nav-text">Google字体库优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gulp插件压缩"><span class="nav-number">8.</span> <span class="nav-text">gulp插件压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装gulp相关插件"><span class="nav-number">8.0.1.</span> <span class="nav-text">安装gulp相关插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行-gulp-任务"><span class="nav-number">8.0.2.</span> <span class="nav-text">执行 gulp 任务</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Gondole</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"gondole"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementById('footer')
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("NKpHWV0HcVJNV3ChjAJkHwSW-gzGzoHsz", "cBHCUFn4JoVaaP7K4Q0mIr7R");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
